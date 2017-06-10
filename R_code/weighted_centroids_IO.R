@@ -51,22 +51,25 @@ csf <- function() {
 }
 
 ###### SOURCE LOCAL FUNCTIONS #######
+
+# Didn't have correct working directory by default.
+setwd("~/Dropbox/AgileC2G_Model/JBEI_feedstock_agnostic/R_code")
 source("weighted_centroids_fun.R")
 
 
 ###### INSTALL PACKAGES IF NECCESSARY ######
-install.packages("raster")
-install.packages("spdep")
-install.packages("maptools")
-install.packages("rgdal")
-install.packages("plyr")
-install.packages("geosphere")
-install.packages("rgeos")
-install.packages("raster")
-install.packages("spdep")
-install.packages("maptools")
-install.packages("rgdal")
-install.packages("plyr")
+#install.packages("raster")
+#install.packages("spdep")
+#install.packages("maptools")
+#install.packages("rgdal")
+#install.packages("plyr")
+#install.packages("geosphere")
+#install.packages("rgeos")
+#install.packages("raster")
+#install.packages("spdep")
+#install.packages("maptools")
+#install.packages("rgdal")
+#install.packages("plyr")
 
 
 ###### LOAD LIBRARIES ######
@@ -90,7 +93,8 @@ counties.spdf <- readRDS("../clean_binary_data/counties.spdf.RDS")
 
 # load NLCD raster
 nlcd.ras <- 
-  raster("../../raw_data_files/nlcd_2011_landcover_2011_edition_2014_10_10.img")
+#  raster("../../raw_data_files/nlcd_2011_landcover_2011_edition_2014_10_10.img")
+  raster("~/Google Drive/JBEI_Sustainability_Team/Feedstock_Agnostic/Analysis/raw_data_files/nlcd_2011_landcover_2011_edition_2014_10_10.img")
 
 # TEMP: crop counties layer to Iowa for testing functionality
 #counties.spdf <- subset(counties.spdf, counties.spdf$STATENAME == "IOWA")
